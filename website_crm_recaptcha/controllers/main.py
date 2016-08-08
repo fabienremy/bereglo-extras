@@ -31,6 +31,7 @@ class contactus(main.contactus):
     def contactus(self, *args, **kw):
         challenge = kw.pop('recaptcha_challenge_field', None)
         response = kw.pop('recaptcha_response_field', None)
+        kw['kwargs'] = []
         if not kw or not challenge or not response:
             pass
         elif request.website.is_captcha_valid(challenge, response):
