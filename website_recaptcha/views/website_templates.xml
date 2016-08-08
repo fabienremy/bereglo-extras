@@ -6,9 +6,9 @@
                 <label class="col-md-3 col-sm-4 control-label" for="description">Captcha</label>
                 <div class="col-md-7 col-sm-8">
                         <script type="text/javascript"
-                               t-att-src="'http://www.google.com/recaptcha/api/challenge?k=%s' % website.recaptcha_public_key"></script>
+                               t-att-src="'//www.google.com/recaptcha/api/challenge?k=%s' % website.recaptcha_public_key"></script>
                     <noscript>
-                        <iframe t-att-src="'http://www.google.com/recaptcha/api/challenge?k=%s' % website.recaptcha_public_key"
+                        <iframe t-att-src="'//www.google.com/recaptcha/api/challenge?k=%s' % website.recaptcha_public_key"
                                    height="300" width="500" frameborder="0"></iframe>
                         <br />
                             <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>

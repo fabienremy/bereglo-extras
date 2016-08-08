@@ -35,7 +35,7 @@ class website(osv.osv):
         for website in self.browse(cr, uid, ids, context=context):
             get_res = {'secret': website.recaptcha_private_key,'response': response}
             try:
-                response = requests.get('https://www.google.com/recaptcha/api/siteverify', params=get_res)
+                response = requests.get('//www.google.com/recaptcha/api/siteverify', params=get_res)
             except Exception,e:
                 raise osv.except_osv(('Invalid Data!'),("%s.")%(e))
             res_con = json.loads(response.content)
